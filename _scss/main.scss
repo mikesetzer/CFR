@@ -1,6 +1,341 @@
 @import "reset";
 @import "syntax";
 
+/*****************************************************************************/
+/*
+/* Mixins and Variables
+/*
+/*****************************************************************************/
+
+$brown: #312A22;
+$grey: #aba9a9;
+$darkgrey: #333333;
+$sand: #EEE8E0;
+$clearsand: rgba(238, 232, 224, .5);
+$lightbrown: #605548;
+
+$sans: Helvetica, open-sans;
+$serif: "Lora", "Times-New-Roman", serif;
+
 body {
     background: white;
 }
+
+/*****************************************************************************/
+/*
+/* Entire Site
+/*
+/*****************************************************************************/
+
+.site {
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+  max-width: 940px;
+  margin: auto;
+}
+
+/*****************************************************************************/
+/*
+/* Hero Backgrounds
+/*
+/*****************************************************************************/
+
+.Chairvolotti_Financial_Retirement_Homepage {
+  background-image: url("../images/homebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 629px;
+  margin-top: -4px;
+}
+
+/*****************************************************************************/
+/*
+/* Header section
+/*
+/*****************************************************************************/
+
+.header {
+
+  .topnav {
+    background-color: $brown;
+    height: 30px;
+    font-size: 13px;
+    color: $grey;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+//***** Media Bar *****//
+
+  .bar {
+    position: absolute;
+    right: 0px;
+    display: inline-flex;
+    margin-right: 15px;
+    margin-left: auto;
+    padding-top: 5px;
+    z-index: 100;
+  }
+
+  .logo {
+    position: absolute;
+    float: left;
+    margin: 15px;
+    p {
+      margin-top: 4px;
+      color: $darkgrey;
+      opacity: .5;
+      font-family: $sans;
+      font-size: 18px;
+      line-height : 26px;
+    }
+  }
+
+  .fa {
+    font-size: 15px;
+    margin: 0 5px;
+  }
+
+  .contact {
+    margin-right: 15px;
+    display: inline-flex;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .social {
+    margin-right: 50px;
+  }
+
+//***** Navbar *****//
+
+  .nav {
+    font-size: 15px;
+    display: inline-flex;
+    right: 0px;
+    position: absolute;
+    font-family: $sans;
+
+    a {
+      color: $darkgrey;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    li {
+      margin: 0 15px;
+    }
+
+  }
+
+//***** Hero image and main text *****//
+
+  .hero {
+    background-image: url("../images/homebg.png");
+    height: 629px;
+    margin-top: -4px;
+  }
+
+  .hero-text {
+    color: white;
+    margin-left: 60px;
+
+
+    .title {
+      font-size : 72px;
+      line-height : 69px;
+      font-weight: 100;
+      padding-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size : 52px;
+      line-height : 26px;
+      font-weight: 100;
+    }
+
+    .subtext {
+      margin-top: 60px;
+      font-size : 18px;
+      line-height : 26px;
+    }
+  }
+
+  .gradient-box {
+    width: 100%;
+    height: 200px;
+    background : -moz-linear-gradient(50% 0% -90deg,rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.08) 86.25%,rgba(255, 255, 255, 0) 100%);
+    background : -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.08) 86.25%, rgba(255, 255, 255, 0) 100%);
+    background : -webkit-gradient(linear,50% 0% ,50% 100% ,color-stop(0,rgba(255, 255, 255, 0.6) ),color-stop(0.8625,rgba(255, 255, 255, 0.08) ),color-stop(1,rgba(255, 255, 255, 0) ));
+    background : -o-linear-gradient(-90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.08) 86.25%, rgba(255, 255, 255, 0) 100%);
+    background : -ms-linear-gradient(-90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.08) 86.25%, rgba(255, 255, 255, 0) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF' ,GradientType=0)";
+    background : linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.08) 86.25%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF' , GradientType=0);
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Shoutout section
+/*
+/*****************************************************************************/
+
+.shoutout {
+  height: 200px;
+  background-color: $sand;
+  color : $brown;
+  text-align: center;
+  h2 {
+    font-size : 36px;
+    line-height : 26px;
+    padding-top: 40px;
+    font-weight: 100;
+  }
+  p {
+    padding-top: 30px;
+    font-size : 18px;
+    line-height : 36px;
+    opacity : 0.5;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Clients section
+/*
+/*****************************************************************************/
+
+.clients {
+  display: inline;
+}
+
+/*****************************************************************************/
+/*
+/* Footer section
+/*
+/*****************************************************************************/
+
+.footer {
+  height: 450px;
+  background-color: $brown;
+}
+
+.footerhead {
+  display: inline-flex;
+
+  h2 {
+    font-size : 26px;
+    line-height : 26px;
+    font-weight: 100;
+    padding-top: 2.8em;
+    color: $sand;
+  }
+
+  .footerlogo {
+    padding-right: 270px;
+    padding-top: 40px;
+  }
+
+  .footerhead1 {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footerhead2 {
+    padding-left: 23px;
+  }
+
+}
+
+.footer-top {
+  font-size : 15px;
+  line-height : 26px;
+  color: $clearsand;
+  margin-top: 20px;
+  height: 175px;
+  padding-bottom: 15px;
+  border-bottom: .5px solid $clearsand;
+
+  .services {
+    border-right: .5px solid $clearsand;
+    max-width: 460px;
+    height: 160px;
+    display: inline-block;
+    float: left;
+
+    ul {
+      display: inline-block;
+      padding: 20px;
+      max-height: 120px;
+      max-width: 230px;
+    }
+
+    li {
+      list-style-type: square;
+      color: #EC6D01;
+
+      p {
+        color: $sand;
+      }
+
+    }
+
+  }
+
+  .contact{
+    color: $clearsand;
+    width: 320px;
+    display: inline-block;
+    height: 120px;
+    padding: 20px;
+    line-height: 20px;
+    border-right: .5px solid $clearsand;
+  }
+
+  .footer_social {
+    color: $grey;
+    font-size : 23px;
+    line-height : 26px;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+
+    .fa {
+      border-radius : 5px;
+      -moz-border-radius : 5px;
+      -webkit-border-radius : 5px;
+      background-color: $lightbrown;
+      box-sizing: border-box;
+      padding: 4px 5.5px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}
+
+.footer-bottom {
+   padding-top: 40px;
+   text-align: center;
+   color: $clearsand;
+   font-family: $serif;
+   font-size : 12px;
+   line-height : 22px;
+}
+
+/*****************************************************************************/
+/*
+/* Cards - Homepage
+/*
+/*****************************************************************************/
