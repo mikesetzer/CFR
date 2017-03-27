@@ -17,6 +17,8 @@ body {
     font-family: "Lora", Helvetica, "open-serif", sans-serif;
     font-size: small;
     text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
