@@ -6,6 +6,8 @@
 /* Mixins and Variables
 /*
 /*****************************************************************************/
+$mobile: 480px;
+$tablet: 768px;
 
 $brown: #312A22;
 $grey: #aba9a9;
@@ -43,6 +45,10 @@ body {
   max-width: 940px;
   margin: auto;
   padding: 0 10px;
+
+  @media(max-width: $mobile){
+    max-width: 460px;
+  }
 }
 
 .one-third {
@@ -93,6 +99,9 @@ body {
   .container {
     width: 100%;
     margin-left: 60px;
+    @media(max-width: $mobile){
+      margin-left: 10px;
+    }
   }
 }
 
@@ -125,6 +134,31 @@ body {
     font-size: 13px;
     color: $grey;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    .logo {
+      img {
+        @media(max-width: $mobile){
+          max-width: 100px;
+          margin-top: 35px;
+        }
+      }
+      p{
+        @media(max-width: $mobile){
+          display: none;
+        }
+      }
+    }
+
+    .bar {
+      .social {
+        a {
+          color: $grey;
+        }
+        @media(max-width: $mobile){
+          display: none;
+        }
+      }
+    }
   }
 
 //***** Media Bar *****//
@@ -222,12 +256,20 @@ body {
       line-height : 69px;
       font-weight: 100;
       padding-bottom: 10px;
+      @media(max-width: $mobile){
+        font-size: 36px;
+        line-height: 36px;
+      }
     }
 
     .subtitle {
       font-size : 52px;
       line-height : 26px;
       font-weight: 100;
+      @media(max-width: $mobile){
+        font-size: 32px;
+        line-height: 32px;
+      }
     }
 
     .subtext {
@@ -804,6 +846,183 @@ body {
 
     img {
       max-width: 200px;
+    }
+  }
+}
+
+
+
+/*****************************************************************************/
+/*
+/* Mobile
+/*
+/*****************************************************************************/
+@media(max-width: $mobile){
+  .header{
+
+    .bar{
+      right: auto;
+      margin: auto;
+      width: 96%;
+      justify-content: space-between;
+      padding: 0 2%;
+      padding-top: 5px;
+    }
+
+    .topnav {
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .nav {
+      font-size: 11px;
+      right: auto;
+      justify-content: space-between;
+      width: 96%;
+      padding: 0 2%;
+
+      ul{
+        padding: 0 1%;
+        width: 98%;
+        justify-content: space-between;
+
+        li{
+          margin: 0 2px;
+        }
+        .dropdown{
+          margin-right: 5px !important;
+          .dropdown-trigger::after{
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+
+  .Chairvolotti_Financial_Retirement_Homepage{
+    height: 70vh;
+    background-position: top left;
+
+    .gradient-box{
+      height: 100px;
+    }
+
+    .hero-text{
+
+      .subtext{
+        margin-top: 30px;
+      }
+      .brokercheck{
+        position: relative;
+        text-align: center;
+        right: auto;
+        max-width: 120px;
+        bottom: -15vh;
+      }
+    }
+  }
+
+  .home{
+    .cards{
+      flex-direction: column;
+      padding: 0;
+
+      .card{
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .shoutout {
+    height: auto;
+    padding: 0 5px;
+
+    h2{
+      padding-top: 20px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 24px;
+      padding: 20px 0;
+    }
+  }
+
+  .clients{
+    height: auto;
+    .container{
+      padding: 20px 5px;
+      flex-direction: column;
+      display: block;
+      text-align: center;
+
+      img{
+        padding: 10px 0;
+        width: auto;
+      }
+
+      h2{
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .footer {
+    height: auto;
+
+    .footerhead {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .footerlogo {
+        padding-right: 0px;
+        display: block;
+        padding-right: 100%;
+        overflow: hidden;
+      }
+
+      .footerhead1{
+        max-width: 40%;
+      }
+
+      .footerhead2 {
+        max-width: 40%;
+      }
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: space-around;
+      padding-bottom: 160px;
+
+      .footerservices{
+        height: auto;
+        width: auto;
+        display: flex;
+        margin-top: 160px;
+        margin-bottom: -160px;
+        border-right: none;
+      }
+
+      .contact {
+        width: auto;
+        padding: 0;
+        max-width: 50%;
+        margin-top: -160px;
+      }
+
+      .footer_social {
+        padding: 0;
+        margin-top: -160px;
+      }
+    }
+
+    .footer-bottom {
+      padding-bottom: 40px;
     }
   }
 }
