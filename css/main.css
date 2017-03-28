@@ -1060,11 +1060,15 @@ body {
         padding-right: 100%;
         overflow: hidden; }
       .footer .footerhead .footerhead1 {
-        max-width: 45%;
-        padding: 20px 0 0 0; }
+        max-width: 40%;
+        padding: 20px 0 0 0;
+        font-size: 22px;
+        line-height: 22px; }
       .footer .footerhead .footerhead2 {
-        max-width: 42%;
-        padding: 20px 0 0 0; }
+        max-width: 40%;
+        padding: 20px 0 0 0;
+        font-size: 22px;
+        line-height: 22px; }
     .footer .footer-top {
       display: -ms-flexbox;
       display: flex;
