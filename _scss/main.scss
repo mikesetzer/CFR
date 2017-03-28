@@ -866,7 +866,35 @@ body {
   }
 }
 
+/*****************************************************************************/
+/*
+/* Contact
+/*
+/*****************************************************************************/
 
+.contactpage {
+  margin-top: -240px;
+}
+
+.contactpageinner {
+  padding: 20px 0;
+
+  .contact-left {
+    width: 50%;
+    color: $darkgrey;
+    font-weight: 100;
+    font-family: $sans;
+
+    @media(max-width: $mobile){
+      width: 100%;
+      padding-bottom: 40px;
+    }
+  }
+
+  .contact-right {
+    @extend .contact-left;
+  }
+}
 
 /*****************************************************************************/
 /*
