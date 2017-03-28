@@ -488,7 +488,7 @@ body {
   .header .hero-text .brokercheck {
     position: absolute;
     right: 25px;
-    bottom: 200px;
+    top: 200px;
     max-width: 150px; }
   .header .hero-text .title {
     font-size: 72px;
