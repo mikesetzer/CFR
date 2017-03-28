@@ -475,40 +475,35 @@ body {
   .header .nav li {
     margin: 0 15px; }
 
-.header .hero {
-  background-image: url("../images/homebg.png");
-  height: 629px;
-  margin-top: -4px; }
+.header a .brokercheck {
+  position: absolute;
+  right: 0px;
+  top: 578px;
+  max-width: 150px; }
 
 .header .hero-text {
   color: white;
   width: 100%;
   margin: auto 0;
   float: left; }
-  .header .hero-text .brokercheck {
-    position: absolute;
-    right: 25px;
-    top: 200px;
-    max-width: 150px; }
   .header .hero-text .title {
     font-size: 72px;
     line-height: 69px;
-    font-weight: 100;
-    padding-bottom: 10px; }
+    font-weight: 100; }
     @media (max-width: 480px) {
       .header .hero-text .title {
         font-size: 36px;
         line-height: 36px; } }
   .header .hero-text .subtitle {
-    font-size: 52px;
-    line-height: 26px;
+    font-size: 72px;
+    line-height: 72px;
     font-weight: 100; }
     @media (max-width: 480px) {
       .header .hero-text .subtitle {
-        font-size: 32px;
-        line-height: 32px; } }
+        font-size: 36px;
+        line-height: 36px; } }
   .header .hero-text .subtext {
-    margin-top: 60px;
+    margin-top: 40px;
     font-size: 18px;
     line-height: 26px; }
 
@@ -765,9 +760,8 @@ body {
     background-color: #ffffff;
     color: #333333;
     font-size: 17px;
-    line-height: 36px; }
-  .home .cards .card:hover, .home .cards .gateway:hover, .home .cards .view-services:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    line-height: 36px;
+    box-shadow: none; }
 
 .home .topcards .card, .home .topcards .gateway, .home .topcards .view-services {
   width: 270px;
@@ -912,6 +906,7 @@ body {
 
 .team-image {
   width: 100px;
+  min-width: 100px;
   max-height: 112px;
   overflow: hidden; }
   .team-image img {
@@ -924,7 +919,9 @@ body {
     overflow: visible; }
 
 .team-text {
-  padding-left: 20px; }
+  padding: 0 20px; }
+  .team-text p {
+    word-wrap: normal; }
 
 .teams {
   display: -ms-flexbox;
@@ -938,12 +935,12 @@ body {
 .ruben {
   padding-bottom: 40px; }
   .ruben .team-image {
-    width: auto;
-    max-width: 200px;
-    max-height: none;
-    overflow: visible; }
+    width: 100px;
+    height: 112px;
+    overflow: hidden; }
     .ruben .team-image img {
-      max-width: 200px; }
+      max-width: 200px;
+      height: 112px; }
 
 /*****************************************************************************/
 /*
@@ -1003,17 +1000,18 @@ body {
   .Chairvolotti_Financial_Retirement_Homepage {
     height: 70vh;
     background-position: top left; }
-    .Chairvolotti_Financial_Retirement_Homepage .gradient-box, .Chairvolotti_Financial_Retirement_Homepage .subpage-gradient-box {
-      height: 100px; }
-    .Chairvolotti_Financial_Retirement_Homepage .hero-text .subtext {
-      margin-top: 30px; }
-    .Chairvolotti_Financial_Retirement_Homepage .hero-text .brokercheck {
+    .Chairvolotti_Financial_Retirement_Homepage a .brokercheck {
       position: relative;
       text-align: center;
       right: auto;
       max-width: 120px;
       bottom: -15vh;
       top: auto; }
+    .Chairvolotti_Financial_Retirement_Homepage .gradient-box, .Chairvolotti_Financial_Retirement_Homepage .subpage-gradient-box {
+      height: 100px; }
+    .Chairvolotti_Financial_Retirement_Homepage .hero-text .subtext {
+      margin-top: 30px;
+      font-size: 16px; }
   .home .cards {
     -ms-flex-direction: column;
         flex-direction: column;
@@ -1109,7 +1107,16 @@ body {
     .footer .footer-bottom {
       padding-bottom: 40px; }
   .team-page .full {
-    padding-top: 40px; }
+    padding-top: 40px;
+    display: block;
+    text-align: center; }
+    .team-page .full .team-image {
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 10px;
+      display: inline-block; }
+    .team-page .full .team-text {
+      text-align: left; }
   .teams {
     padding: 0;
     max-width: 100%;
@@ -1124,7 +1131,9 @@ body {
         .teams .team .team-image img {
           width: 100px; }
     .teams .ruben .team-image {
-      width: 150px !important; }
+      width: 150px !important;
+      overflow: hidden;
+      padding-bottom: 40px; }
       .teams .ruben .team-image img {
         width: auto;
         max-width: 150px; }
