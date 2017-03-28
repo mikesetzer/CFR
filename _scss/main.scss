@@ -116,7 +116,7 @@ body {
   background : linear-gradient(180deg, rgba(213, 223, 229, 1) 0%, rgba(255, 255, 255, 1) 99.51%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D5DFE5',endColorstr='#FFFFFF' , GradientType=0);
 
-  height: 400px;
+  min-height: 400px;
   margin-bottom: -150px;
   margin-top: -4px;
 }
@@ -1021,29 +1021,35 @@ body {
     height: auto;
 
     .footerhead {
-      display: flex;
+      display: block;
       flex-wrap: wrap;
       justify-content: space-around;
 
       .footerlogo {
         padding-right: 0px;
-        display: flex;
-        padding-right: 190px;
+        display: block;
+        padding-right: 100vw;
         overflow: hidden;
       }
 
       .footerhead1{
-        max-width: 40%;
+        left: 10vw;
+        width: 46vw;
         padding: 20px 0 0 0;
         font-size: 22px;
         line-height: 22px;
+        display: inline-block;
+        text-align: center;
       }
 
       .footerhead2 {
-        max-width: 40%;
+        width: 46vw;
+        text-align: center;
+        right: 10vw;
         padding: 20px 0 0 0;
         font-size: 22px;
         line-height: 22px;
+        display: inline-block;
       }
     }
 
@@ -1081,11 +1087,18 @@ body {
       .footer_social {
         padding: 0;
         margin-top: -160px;
+        padding-right: 30px;
       }
     }
 
     .footer-bottom {
       padding-bottom: 40px;
+    }
+  }
+
+  .team-page {
+    .full {
+      padding-top: 40px;
     }
   }
 
@@ -1126,9 +1139,6 @@ body {
     .right {
       width: 100%;
     }
-
-
-
   }
 
   .services {
