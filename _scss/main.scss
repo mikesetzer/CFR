@@ -19,7 +19,7 @@ $clearsand: rgba(238, 232, 224, .5);
 $lightbrown: #605548;
 $orange: #ec6d01;
 
-$sans: 'Open Sans', sans-serif;
+$sans: 'Helvetica', 'Arial', sans-serif;
 $serif: 'Lora', 'Times-New-Roman', serif;
 
 body {
@@ -157,6 +157,15 @@ body {
         }
         @media(max-width: $mobile){
           display: none;
+        }
+      }
+      .contact {
+        a {
+          display: inline-flex;
+          color: $grey;
+        }
+        p {
+          font-family: $sans;
         }
       }
     }
@@ -369,10 +378,6 @@ body {
 /*
 /*****************************************************************************/
 
-.subpage-subtext {
-  word-wrap: normal;
-}
-
 .subpage-gradient-box {
   @extend .gradient-box;
   max-height: 100px;
@@ -388,8 +393,9 @@ body {
 }
 
 .subpage-subtext {
-  padding-top: 40px;
-  font-size : 18px;
+  word-wrap: normal;
+  padding-top: 20px;
+  font-size : 16px;
   line-height : 21px;
   font-weight: 100;
   color: $medgrey;
@@ -405,7 +411,7 @@ body {
 
   p {
     font-size : 13px;
-    line-height : 21px;
+    line-height : 19px;
     color: $medgrey;
     font-family: $sans;
   }
@@ -432,7 +438,7 @@ body {
   p {
     padding-top: 30px;
     font-size : 18px;
-    line-height : 36px;
+    line-height : 24px;
     opacity : 0.5;
   }
 }
@@ -521,6 +527,10 @@ body {
   padding-bottom: 15px;
   border-bottom: .5px solid $clearsand;
 
+  a {
+    color: $clearsand;
+  }
+
   .footerservices {
     border-right: .5px solid $clearsand;
     max-width: 460px;
@@ -562,7 +572,7 @@ body {
     font-size : 23px;
     line-height : 26px;
     display: inline-block;
-    padding: 20px;
+    padding: 20px 50px;
     vertical-align: top;
 
     .fa {
@@ -696,7 +706,7 @@ body {
 .process-image {
   text-align: center;
   padding-bottom: 0px;
-  padding-top: 40px;
+  padding-top: 20px;
 
   img {
     width: 100%;
@@ -709,7 +719,7 @@ body {
 /*
 /*****************************************************************************/
 .service-text{
-  padding-top: 40px;
+  padding-top: 20px;
   height: 146px;
 }
 
@@ -755,6 +765,11 @@ body {
   }
 }
 
+.viewsection {
+  width: 100%;
+  text-align: center;
+}
+
 /*****************************************************************************/
 /*
 /* Services
@@ -765,13 +780,8 @@ body {
   padding: 20px 0;
 }
 
-.services-page{
-  :first-child {
-    padding-top: 0;
-  }
-
-  margin-top: -220px;
-  padding-bottom: 20px;
+.ourservicesbumper {
+  margin-top: -250px;
 }
 
 .services-left {
@@ -816,7 +826,7 @@ body {
 
 .full {
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
 
   .team-image {
     overflow: visible;
@@ -885,8 +895,8 @@ body {
       font-size: 11px;
       right: auto;
       justify-content: space-between;
-      width: 96%;
-      padding: 0 2%;
+      width: 98%;
+      padding: 0 1%;
 
       ul{
         padding: 0 1%;
@@ -895,9 +905,10 @@ body {
 
         li{
           margin: 0 2px;
+          text-decoration: underline;
         }
         .dropdown{
-          margin-right: 5px !important;
+          margin-right: 0 !important;
           .dropdown-trigger::after{
             display: none;
           }
@@ -926,6 +937,7 @@ body {
         right: auto;
         max-width: 120px;
         bottom: -15vh;
+        top: auto;
       }
     }
   }
@@ -947,6 +959,7 @@ body {
 
     h2{
       padding-top: 20px;
+      line-height: 32px;
     }
     p{
       font-size: 14px;
@@ -964,12 +977,14 @@ body {
       text-align: center;
 
       img{
-        padding: 10px 0;
+        padding: 15px 0;
         width: auto;
       }
 
       h2{
-        padding: 10px 0;
+        padding: 15px 0;
+        font-size: 18px;
+        line-height: 18px;
       }
     }
   }
